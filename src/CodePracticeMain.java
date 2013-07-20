@@ -13,6 +13,7 @@ public class CodePracticeMain {
     for (int i = 0; i < strings.length; i++) {
       System.out.println("String: " + strings[i] + " " + 
           StringProblems.hasAllUniqueCharacters2(strings[i]));
+      System.out.println("String: " + strings[i] + " " + StringProblems.reverseString(strings[i]));
     }
 
   }

@@ -51,5 +51,20 @@ public class StringProblems {
     }
     return true;
   }
+  
+  /**
+   * Problem:
+   * Implement an algorithm to reverse a string.
+   * @param string the input string.
+   */
+  public static String reverseString(String string) {
+    StringBuilder stringBuilder = new StringBuilder();
+    for (int i = string.length() - 1; i > 0; i--) {
+      stringBuilder.append(string.charAt(i));
+    }
+    return stringBuilder.toString();
+  }
+
+  
 
 }
