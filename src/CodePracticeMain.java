@@ -15,6 +15,10 @@ public class CodePracticeMain {
           StringProblems.hasAllUniqueCharacters2(strings[i]));
       System.out.println("String: " + strings[i] + " " + StringProblems.reverseString(strings[i]));
     }
+    
+    int[] bars = {2, 3, 4, 3, 2, 6, 4, 9, 1};
+    
+    System.out.print("Water: " + new FloodingBarGraph().solve(bars));
 
   }
 
