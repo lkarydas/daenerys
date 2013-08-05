@@ -19,6 +19,9 @@ public class CodePracticeMain {
     int[] bars = {2, 3, 4, 3, 2, 6, 4, 9, 1};
     
     System.out.print("Water: " + new FloodingBarGraph().solve(bars));
+    
+    System.out.println("\n\nString Permutations:");
+    StringProblems.printPermutations("abcd");
 
   }
 

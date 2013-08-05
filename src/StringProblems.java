@@ -66,5 +66,24 @@ public class StringProblems {
   }
 
   
+  /**
+   * Given a string print all possible permutations.
+   */
+  public static void printPermutations(String s) {
+    perm("", s);
+  }
+  
+  /**
+   * Recursive function.
+   */
+  private static void perm(String prefix, String s) {
+    if (s.length() == 1) {
+      System.out.println(prefix + s);
+      return;
+    }
+    for (int i = 0; i < s.length(); i++) {
+      perm(prefix + s.charAt(i), s.substring(0, i) + s.substring(i+1));
+    }
+  }
 
 }
