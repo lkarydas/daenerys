@@ -22,6 +22,18 @@ public class CodePracticeMain {
     
     System.out.println("\n\nString Permutations:");
     StringProblems.printPermutations("abcd");
+    
+    
+    IntervalProblems intervalProblems = new IntervalProblems();
+    
+    Interval[] intervals = new Interval[5];
+    intervals[0] = new Interval(0, 1);
+    intervals[1] = new Interval(3, 7);
+    intervals[2] = new Interval(6, 19);
+    intervals[3] = new Interval(27, 28);
+    intervals[4] = new Interval(56, 57);
+    
+    intervalProblems.findUnion(intervals);
 
   }
 
