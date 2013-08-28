@@ -90,7 +90,6 @@ public class Solution {
 		Node[] children;
 		Queue<Node> queue = new LinkedList<Node>();
 		queue.add(root);
-		root.visited = true;
 		while(!queue.isEmpty()) {
 			node = (Node) queue.remove();
 			child = null;
@@ -100,7 +99,6 @@ public class Solution {
 			children = node.getChildren();
 			for (int i = 0; i < children.length; i++) {
 				child = children[i];
-				child.visited = true;
 				queue.add(child);
 			}
 		}
@@ -166,7 +164,6 @@ public class Solution {
 		public int K; 					// Number of pegs.
 		private Move move;			    // The move that takes us from the parent node to this.
 		private Node parent;
-		public boolean visited;
 
 		boolean hasTheSameConfiguration(int[] configuration) {
 			return Arrays.equals(configuration, this.configuration);
@@ -175,7 +172,6 @@ public class Solution {
 		Node(int[] configuration, int pegCount) {
 			this.configuration = configuration;
 			K = pegCount;
-			visited = false;
 		}
 
 		Node(int[] configuration, Move move, Node parent, int pegCount) {
@@ -183,7 +179,6 @@ public class Solution {
 			K = pegCount;
 			this.move = move;
 			this.parent = parent;
-			visited = false;
 		}
 
 		Node[] getChildren() {
