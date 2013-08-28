@@ -156,19 +156,12 @@ public class Solution {
 			this.src = src;
 			this.dst = dst;
 		}
-		int getSrc() {
-			return this.src;
-		}
-		int getDst() {
-			return this.dst;
-		}
 		public void print() {
 			System.out.println(src + " " + dst);
 		}
 	}
 
 	private class Node {
-
 		private int[] configuration;  	// Numbers represent peg number, positions represent disc radius.
 		public int K; 					// Number of pegs.
 		private Move move;			    // The move that takes us from the parent node to this.
@@ -177,17 +170,6 @@ public class Solution {
 
 		boolean hasTheSameConfiguration(int[] configuration) {
 			return Arrays.equals(configuration, this.configuration);
-		}
-
-		public void print() {
-			System.out.println("Node:");
-			for (int i = 0; i < configuration.length; i++) {
-				System.out.print(configuration[i] +" ");
-			}
-			System.out.println("");
-			System.out.println("(" + this.move.getSrc() + ", " + this.move.getDst() + ")");
-			System.out.println("Parent: " + this.parent);
-
 		}
 
 		Node(int[] configuration, int pegCount) {
@@ -216,11 +198,6 @@ public class Solution {
 
 				}
 			}
-
-			if (children.isEmpty()) {
-				System.err.println("No children!");
-			}
-
 			return children.toArray(new Node[children.size()]);
 		}
 
