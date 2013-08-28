@@ -1,4 +1,5 @@
 import java.io.BufferedReader;
+import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -87,15 +88,12 @@ public class Solution {
 	{
 		Node node = null, child;
 		Node[] children;
-
 		Queue<Node> queue = new LinkedList<Node>();
 		queue.add(root);
 		root.visited = true;
-
 		while(!queue.isEmpty()) {
 			node = (Node) queue.remove();
 			child = null;
-
 			if (node.hasTheSameConfiguration(targetConfiguration)) {
 				break;
 			}
@@ -105,7 +103,6 @@ public class Solution {
 				child.visited = true;
 				queue.add(child);
 			}
-
 		}
 		// Reconstruct the path of nodes by following the parents.
 		ArrayList<Node> path = new ArrayList<Node>();
@@ -125,6 +122,12 @@ public class Solution {
 		}
 	}
 
+	/**
+	 * Parses a line of space separated integers.
+	 * @param br An input {@link BufferedReader}. 
+	 * @param count The number of integers to parse.
+	 * @return An integer array with the numbers read.
+	 */
 	int[] parseSpaceSeparatedNumbers(BufferedReader br, int count) {
 		String line = null;
 		try {
@@ -133,13 +136,6 @@ public class Solution {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-
-		if (line == null) {
-			System.err.println("Couldn't read line from input.");
-		} else {
-			System.err.println("Line: " + line);
-		}
-
 		String[] parts = line.split(" ");
 		if (parts.length != count) {
 			System.err.println("Second line has to have exactly " + count + " numbers.");
