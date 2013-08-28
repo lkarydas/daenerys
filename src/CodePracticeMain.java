@@ -35,6 +35,9 @@ public class CodePracticeMain {
     
     intervalProblems.findUnion(intervals);
 
+    NumberProblems numberProblems = new NumberProblems();
+    System.out.println(numberProblems.isPower(1, 3));
+    
   }
 
 }
