@@ -43,7 +43,7 @@ public class CodePracticeMain {
     System.out.println("___________________________________________Array Problems");
     int[][] mat = new int[][] {{1, 2, 3}, {4, 5, 6}, {7, 8, 9}};
     System.out.println(Arrays.deepToString(mat));
-    int[][] out = ArrayProblems.rotateNintyDegreesClockwise(mat);
+    int[][] out = ArrayProblems.rotateNinety(mat);
     System.out.println(Arrays.deepToString(out));
     
     
