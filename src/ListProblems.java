@@ -20,4 +20,23 @@ public class ListProblems {
 		return currentElement;
 	}
 	
+	/**
+	 * Recursively reverse a single linked list.
+	 * @param list The head of the list.
+	 * @return the new head of the list.
+	 */
+	ListElement<Integer> reverseRecursively(ListElement<Integer> list) {
+		if (list == null) {
+			return null;
+		}
+		if (list.getNext() == null) {
+			return list;
+		}
+		ListElement<Integer> secondElement = list.getNext();
+		list.setNext(null);
+		ListElement<Integer> reversedList = reverseRecursively(secondElement);
+		secondElement.setNext(list);
+		return reversedList;
+	}
+	
 }

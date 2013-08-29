@@ -55,11 +55,12 @@ public class CodePracticeMain {
     list.setNext(l2);
     l2.setNext(l3);
     l3.setNext(l4);
-    
+    	
     list.print();
     
     ListProblems listProblems = new ListProblems();
-    list = listProblems.reverseIteratively(list);
+    //list = listProblems.reverseIteratively(list);
+    list = listProblems.reverseRecursively(list);
     list.print();
     
   }
