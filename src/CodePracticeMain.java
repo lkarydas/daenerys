@@ -48,6 +48,16 @@ public class CodePracticeMain {
     ArrayProblems.rotateNinetyInPlace(mat);
     System.out.println(Arrays.deepToString(mat));
     
+    ListElement<Integer> list = new ListElement<Integer>(1);
+    ListElement<Integer> l2 = new ListElement<Integer>(2);
+    ListElement<Integer> l3 = new ListElement<Integer>(3);
+    ListElement<Integer> l4 = new ListElement<Integer>(4);
+    list.setNext(l2);
+    l2.setNext(l3);
+    l3.setNext(l4);
+    
+    list.print();
+    
   }
 
 }
