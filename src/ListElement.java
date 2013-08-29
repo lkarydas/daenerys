@@ -26,4 +26,22 @@ public class ListElement<T> {
     return next;
   }
 
+  @Override
+  public String toString() {
+	  return data.toString();
+  }
+  
+  /**
+   * Prints the list.
+   */
+  public void print() {
+	  System.out.print(this.toString() + " ");
+	  ListElement<T> nextElement = this.getNext();
+	  while (nextElement != null) {
+		  System.out.print(nextElement.toString() + " ");
+		  nextElement = nextElement.getNext();
+	  }
+	  System.out.println("");
+  }
+  
 }
