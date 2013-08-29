@@ -58,6 +58,10 @@ public class CodePracticeMain {
     
     list.print();
     
+    ListProblems listProblems = new ListProblems();
+    list = listProblems.reverseIteratively(list);
+    list.print();
+    
   }
 
 }
