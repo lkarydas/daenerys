@@ -45,7 +45,8 @@ public class CodePracticeMain {
     System.out.println(Arrays.deepToString(mat));
     int[][] out = ArrayProblems.rotateNinety(mat);
     System.out.println(Arrays.deepToString(out));
-    
+    ArrayProblems.rotateNinetyInPlace(mat);
+    System.out.println(Arrays.deepToString(mat));
     
   }
 
