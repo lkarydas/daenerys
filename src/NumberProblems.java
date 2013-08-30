@@ -1,3 +1,10 @@
+/**
+ * 
+ * Code practice with problems associated with numbers.
+ * 
+ * @author Lazaros Karydas
+ *
+ */
 class NumberProblems {
 
 	/**
