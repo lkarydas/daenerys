@@ -1,6 +1,11 @@
 import java.util.Arrays;
 
 public class IntervalProblems {
+	
+	/**
+	 * Given a set of intervals, print the union.
+	 * @param intervals the intervals to find the union of
+	 */
 	void findUnion(Interval[] intervals) {
 		Interval[] sortedByStart = new Interval[intervals.length];
 		System.arraycopy(intervals, 0, sortedByStart, 0, intervals.length);
