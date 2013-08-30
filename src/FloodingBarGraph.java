@@ -1,13 +1,11 @@
-
 /**
  * Solves the Flooding Bar Graph problem.
+ * 
  */
 public class FloodingBarGraph {
   
   int solve(int[] bars) {
-    
     int[] leftMax = new int[bars.length];
-    
     int curMax = 0;
     for (int i = 0; i < bars.length; i++) {
       if (curMax < bars[i]) {
@@ -32,5 +30,4 @@ public class FloodingBarGraph {
     
     return sum;
   }
-
 }
