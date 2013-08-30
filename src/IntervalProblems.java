@@ -1,9 +1,6 @@
 import java.util.Arrays;
 
-
 public class IntervalProblems {
-
-	
 	void findUnion(Interval[] intervals) {
 		Interval[] sortedByStart = new Interval[intervals.length];
 		System.arraycopy(intervals, 0, sortedByStart, 0, intervals.length);
@@ -16,14 +13,6 @@ public class IntervalProblems {
 		for (int i = 0; i < sortedByStart.length; i++) {
 			System.out.println(sortedByStart[i].toString());
 		}
-//		
-//		
-//
-//		System.out.println("Sorted by end:");
-//		for (int i = 0; i < sortedByEnd.length; i++) {
-//			System.out.println(sortedByEnd[i].toString());
-//		}
-
 		int index = 0;
 		int intervalStart;
 		int maxEnd = 0; // Assume non-negative integers.
@@ -41,13 +30,5 @@ public class IntervalProblems {
 			}
 			index++;
 		}
-		
-		
-		
-		
-		
-		
-		
 	}
-	
 }
