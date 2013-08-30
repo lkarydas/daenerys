@@ -1,4 +1,3 @@
-
 /**
  * A linear singly linked-list implementation using generics.
  */
@@ -43,5 +42,4 @@ public class ListElement<T> {
 	  }
 	  System.out.println("");
   }
-  
 }
