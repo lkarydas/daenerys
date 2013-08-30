@@ -42,6 +42,11 @@ public class CodePracticeMain {
     NumberProblems numberProblems = new NumberProblems();
     System.out.println(numberProblems.isPower(1, 3));
     
+    System.out.println("Fibonacci numbers: ");
+    for (int i = 0; i < 10; i++) {
+    	System.out.print(numberProblems.fibonacci(i) + " ");
+    }
+    System.out.println("");
     System.out.println("___________________________________________Array Problems");
     int[][] mat = new int[][] {{1, 2, 3}, {4, 5, 6}, {7, 8, 9}};
     System.out.println(Arrays.deepToString(mat));
