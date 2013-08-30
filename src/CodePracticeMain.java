@@ -25,7 +25,7 @@ public class CodePracticeMain {
     System.out.println("\n\nString Permutations:");
     StringProblems.printPermutations("abcd");
     
-    
+    System.out.println("___________________________________________Interval Problems");
     IntervalProblems intervalProblems = new IntervalProblems();
     
     Interval[] intervals = new Interval[5];
@@ -36,7 +36,9 @@ public class CodePracticeMain {
     intervals[4] = new Interval(56, 57);
     
     intervalProblems.findUnion(intervals);
+    intervalProblems.checkOverlap(intervals, new Interval(0, 4));
 
+    System.out.println("___________________________________________Number Problems");
     NumberProblems numberProblems = new NumberProblems();
     System.out.println(numberProblems.isPower(1, 3));
     

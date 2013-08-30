@@ -36,4 +36,20 @@ public class IntervalProblems {
 			index++;
 		}
 	}
+	/**
+	 * Given an interval and a set of interval, find the subset of the set that the interval
+	 * overlaps with. The solution is O(n) time.
+	 * @param intervals the set of intervals.
+	 * @param interval the interval to check overlap
+	 * @return
+	 */
+	void checkOverlap(Interval[] intervals, Interval interval) {
+		for (int i = 0; i < intervals.length; i++) {
+			if ((interval.getStart() < intervals[i].getEnd()) && 
+					(interval.getEnd() > intervals[i].getStart())) {
+				System.out.println(intervals[i]);
+			}
+		}
+	}
+	
 }
