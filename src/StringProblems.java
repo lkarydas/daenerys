@@ -1,8 +1,6 @@
 import java.util.HashMap;
-
-
 /**
- * Practice problems. 
+ * Practice problems related to Strings.
  */
 public class StringProblems {
 
@@ -65,7 +63,6 @@ public class StringProblems {
     return stringBuilder.toString();
   }
 
-  
   /**
    * Given a string print all possible permutations.
    */
@@ -85,5 +82,4 @@ public class StringProblems {
       perm(prefix + s.charAt(i), s.substring(0, i) + s.substring(i+1));
     }
   }
-
 }
