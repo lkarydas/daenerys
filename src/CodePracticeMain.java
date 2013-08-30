@@ -44,9 +44,15 @@ public class CodePracticeMain {
     
     System.out.println("Fibonacci numbers: ");
     for (int i = 0; i < 10; i++) {
-    	System.out.print(numberProblems.fibonacci(i) + " ");
+    	System.out.print(numberProblems.fibRec(i) + " ");
     }
     System.out.println("");
+    for (int i = 0; i < 10; i++) {
+    	System.out.print(numberProblems.fibIter(i) + " ");
+    }
+    System.out.println("");
+    
+    
     System.out.println("___________________________________________Array Problems");
     int[][] mat = new int[][] {{1, 2, 3}, {4, 5, 6}, {7, 8, 9}};
     System.out.println(Arrays.deepToString(mat));
