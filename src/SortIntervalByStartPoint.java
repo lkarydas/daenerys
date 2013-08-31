@@ -1,8 +1,6 @@
 import java.util.Comparator;
 
-
 class SortIntervalByStartPoint implements Comparator<Interval> {
-
 	@Override
 	public int compare(Interval arg0, Interval arg1) {
 		if (arg0.getStart() < arg1.getStart()) {
@@ -12,5 +10,4 @@ class SortIntervalByStartPoint implements Comparator<Interval> {
 		}
 		return 0;
 	}
-
 }
