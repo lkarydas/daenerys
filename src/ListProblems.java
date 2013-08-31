@@ -1,4 +1,3 @@
-
 public class ListProblems {
 
 	/**
@@ -38,5 +37,4 @@ public class ListProblems {
 		secondElement.setNext(list);
 		return reversedList;
 	}
-	
 }
