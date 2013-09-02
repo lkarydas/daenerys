@@ -52,4 +52,20 @@ public class ArrayProblems {
 			}
 		}
 	}
+	
+	/**
+	 * Merge two sorted arrays.
+	 * @param a
+	 * @param b
+	 * @return
+	 */
+	static int[] mergeSorted(int[] a, int[] b) {
+		int[] c = new int[a.length + b.length];
+		int ia = 0, ib = 0;
+		for (int i = 0; i < a.length + b.length; i++) {
+			// John Grana's one liner.
+			c[i] = (ia < a.length) && ((ib >= b.length) || (a[ia] < b[ib])) ? a[ia++] : b[ib++];
+		}
+		return c;
+	}
 }

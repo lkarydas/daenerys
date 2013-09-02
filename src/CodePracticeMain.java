@@ -61,6 +61,13 @@ public class CodePracticeMain {
     ArrayProblems.rotateNinetyInPlace(mat);
     System.out.println(Arrays.deepToString(mat));
     
+    System.out.println("Merge sorted arrays: ");
+    int[] array1 = new int[]{1, 2, 8, 14, 27};
+    int[] array2 = new int[]{2, 2, 2, 11, 12, 15, 23};
+    
+    System.out.println(Arrays.toString(ArrayProblems.mergeSorted(array1, array2)));
+    
+    System.out.println("___________________________________________Array Problems");  
     ListElement<Integer> list = new ListElement<Integer>(1);
     ListElement<Integer> l2 = new ListElement<Integer>(2);
     ListElement<Integer> l3 = new ListElement<Integer>(3);
