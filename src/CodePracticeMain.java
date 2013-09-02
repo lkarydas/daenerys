@@ -62,10 +62,10 @@ public class CodePracticeMain {
     System.out.println(Arrays.deepToString(mat));
     
     System.out.println("Merge sorted arrays: ");
-    int[] array1 = new int[]{1, 2, 8, 14, 27};
-    int[] array2 = new int[]{2, 2, 2, 11, 12, 15, 23};
+    int[] array1 = new int[]{1, 2, 3, 4, 5};
+    int[] array2 = new int[]{1, 8, 9, 11, 12, 15, 23, 34, 78};
     
-    System.out.println(Arrays.toString(ArrayProblems.mergeSorted(array1, array2)));
+    System.out.println(Arrays.toString(ArrayProblems.mergeSorted2(array1, array2)));
     
     System.out.println("___________________________________________Array Problems");  
     ListElement<Integer> list = new ListElement<Integer>(1);
