@@ -70,7 +70,7 @@ public class CodePracticeMain {
 
 		System.out.println(Arrays.toString(ArrayProblems.mergeSorted2(array1, array2)));
 
-		System.out.println("___________________________________________Array Problems");  
+		System.out.println("___________________________________________List Problems");  
 		ListElement<Integer> list = new ListElement<Integer>(1);
 		ListElement<Integer> l2 = new ListElement<Integer>(2);
 		ListElement<Integer> l3 = new ListElement<Integer>(3);
@@ -86,6 +86,21 @@ public class CodePracticeMain {
 		list = listProblems.reverseRecursively(list);
 		list.print();
 
+		System.out.println("\n\n___________________________________________ Graph Problems");
+		
+		Graph G = new Graph();
+		G.addEdge(0, 1, 3);
+		G.addEdge(0, 3, 1);
+		G.addEdge(1, 2, 8);
+		G.addEdge(2, 3, 6);
+		G.addEdge(2, 4, 13);
+		G.addEdge(4, 5, 10);
+		G.addEdge(5, 6, 24);
+		G.addEdge(6, 7, 9);
+		G.addEdge(5, 7, 3);
+		G.print();
+		
+		
 	}
 
 }
