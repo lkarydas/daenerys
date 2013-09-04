@@ -82,4 +82,21 @@ public class StringProblems {
       perm(prefix + s.charAt(i), s.substring(0, i) + s.substring(i+1));
     }
   }
+  
+  /**
+   * Shift a string to the left with rotation.
+   * @param s the string to be shifted
+   * @param shift the number of positions to shift
+   * @return the shifted string
+   */
+  static String rotationShift(String s, int shift) {
+	  StringBuilder sb = new StringBuilder();
+	  for (int i = 0; i < s.length() - shift; i++) {
+		  sb.append(s.charAt(i + shift));
+	  }
+	  for (int i = 0; i < shift; i++) {
+		  sb.append(s.charAt(i));
+	  }
+	  return sb.toString();
+  }
 }

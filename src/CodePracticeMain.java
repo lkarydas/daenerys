@@ -7,82 +7,85 @@ import java.util.Arrays;
 public class CodePracticeMain {
 
 
-  public static void main(String[] args) {
+	public static void main(String[] args) {
+
+		System.out.println("___________________________________________String Problems");
+		String[] strings = { "abcdef", " 78032soa", "I hope this helps.", "78032soa3"};
+
+		for (int i = 0; i < strings.length; i++) {
+			System.out.println("String: " + strings[i] + " " + 
+					StringProblems.hasAllUniqueCharacters2(strings[i]));
+			System.out.println("String: " + strings[i] + " " + StringProblems.reverseString(strings[i]));
+		}
+
+		int[] bars = {2, 3, 4, 3, 2, 6, 4, 9, 1};
+
+		System.out.print("Water: " + new FloodingBarGraph().solve(bars));
+
+		System.out.println("\n\nString Permutations:");
+		StringProblems.printPermutations("abcd");
+		
+		System.out.println("\n Shift string with rotation:");
+		System.out.println(StringProblems.rotationShift("abcdefghijk", 2));
+
+		System.out.println("___________________________________________Interval Problems");
+		IntervalProblems intervalProblems = new IntervalProblems();
+
+		Interval[] intervals = new Interval[5];
+		intervals[0] = new Interval(0, 1);
+		intervals[1] = new Interval(3, 7);
+		intervals[2] = new Interval(6, 19);
+		intervals[3] = new Interval(27, 28);
+		intervals[4] = new Interval(56, 57);
+
+		intervalProblems.findUnion(intervals);
+		intervalProblems.checkOverlap(intervals, new Interval(0, 4));
+
+		System.out.println("___________________________________________Number Problems");
+		NumberProblems numberProblems = new NumberProblems();
+		System.out.println(numberProblems.isPower(1, 3));
+
+		System.out.println("Fibonacci numbers: ");
+		for (int i = 0; i < 10; i++) {
+			System.out.print(numberProblems.fibRec(i) + " ");
+		}
+		System.out.println("");
+		for (int i = 0; i < 10; i++) {
+			System.out.print(numberProblems.fibIter(i) + " ");
+		}
+		System.out.println("");
 
 
-    String[] strings = { "abcdef", " 78032soa", "I hope this helps.", "78032soa3"};
+		System.out.println("___________________________________________Array Problems");
+		int[][] mat = new int[][] {{1, 2, 3}, {4, 5, 6}, {7, 8, 9}};
+		System.out.println(Arrays.deepToString(mat));
+		int[][] out = ArrayProblems.rotateNinety(mat);
+		System.out.println(Arrays.deepToString(out));
+		ArrayProblems.rotateNinetyInPlace(mat);
+		System.out.println(Arrays.deepToString(mat));
 
-    for (int i = 0; i < strings.length; i++) {
-      System.out.println("String: " + strings[i] + " " + 
-          StringProblems.hasAllUniqueCharacters2(strings[i]));
-      System.out.println("String: " + strings[i] + " " + StringProblems.reverseString(strings[i]));
-    }
-    
-    int[] bars = {2, 3, 4, 3, 2, 6, 4, 9, 1};
-    
-    System.out.print("Water: " + new FloodingBarGraph().solve(bars));
-    
-    System.out.println("\n\nString Permutations:");
-    StringProblems.printPermutations("abcd");
-    
-    System.out.println("___________________________________________Interval Problems");
-    IntervalProblems intervalProblems = new IntervalProblems();
-    
-    Interval[] intervals = new Interval[5];
-    intervals[0] = new Interval(0, 1);
-    intervals[1] = new Interval(3, 7);
-    intervals[2] = new Interval(6, 19);
-    intervals[3] = new Interval(27, 28);
-    intervals[4] = new Interval(56, 57);
-    
-    intervalProblems.findUnion(intervals);
-    intervalProblems.checkOverlap(intervals, new Interval(0, 4));
+		System.out.println("Merge sorted arrays: ");
+		int[] array1 = new int[]{1, 2, 3, 4, 5};
+		int[] array2 = new int[]{1, 8, 9, 11, 12, 15, 23, 34, 78};
 
-    System.out.println("___________________________________________Number Problems");
-    NumberProblems numberProblems = new NumberProblems();
-    System.out.println(numberProblems.isPower(1, 3));
-    
-    System.out.println("Fibonacci numbers: ");
-    for (int i = 0; i < 10; i++) {
-    	System.out.print(numberProblems.fibRec(i) + " ");
-    }
-    System.out.println("");
-    for (int i = 0; i < 10; i++) {
-    	System.out.print(numberProblems.fibIter(i) + " ");
-    }
-    System.out.println("");
-    
-    
-    System.out.println("___________________________________________Array Problems");
-    int[][] mat = new int[][] {{1, 2, 3}, {4, 5, 6}, {7, 8, 9}};
-    System.out.println(Arrays.deepToString(mat));
-    int[][] out = ArrayProblems.rotateNinety(mat);
-    System.out.println(Arrays.deepToString(out));
-    ArrayProblems.rotateNinetyInPlace(mat);
-    System.out.println(Arrays.deepToString(mat));
-    
-    System.out.println("Merge sorted arrays: ");
-    int[] array1 = new int[]{1, 2, 3, 4, 5};
-    int[] array2 = new int[]{1, 8, 9, 11, 12, 15, 23, 34, 78};
-    
-    System.out.println(Arrays.toString(ArrayProblems.mergeSorted2(array1, array2)));
-    
-    System.out.println("___________________________________________Array Problems");  
-    ListElement<Integer> list = new ListElement<Integer>(1);
-    ListElement<Integer> l2 = new ListElement<Integer>(2);
-    ListElement<Integer> l3 = new ListElement<Integer>(3);
-    ListElement<Integer> l4 = new ListElement<Integer>(4);
-    list.setNext(l2);
-    l2.setNext(l3);
-    l3.setNext(l4);
-    	
-    list.print();
-    
-    ListProblems listProblems = new ListProblems();
-    //list = listProblems.reverseIteratively(list);
-    list = listProblems.reverseRecursively(list);
-    list.print();
-    
-  }
+		System.out.println(Arrays.toString(ArrayProblems.mergeSorted2(array1, array2)));
+
+		System.out.println("___________________________________________Array Problems");  
+		ListElement<Integer> list = new ListElement<Integer>(1);
+		ListElement<Integer> l2 = new ListElement<Integer>(2);
+		ListElement<Integer> l3 = new ListElement<Integer>(3);
+		ListElement<Integer> l4 = new ListElement<Integer>(4);
+		list.setNext(l2);
+		l2.setNext(l3);
+		l3.setNext(l4);
+
+		list.print();
+
+		ListProblems listProblems = new ListProblems();
+		//list = listProblems.reverseIteratively(list);
+		list = listProblems.reverseRecursively(list);
+		list.print();
+
+	}
 
 }
