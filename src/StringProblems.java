@@ -151,4 +151,23 @@ public class StringProblems {
 		return sb.toString();
 	}
 	
+	/**
+	 * Return a new string for which all duplicate characters from the input string have been
+	 * deleted. The order is maintained. Linear complexity.
+	 * @param s
+	 * @return
+	 */
+	static String getUnique(String s) {
+		HashSet<Character> charSet = new HashSet<Character>();
+		StringBuilder sb = new StringBuilder();
+		// For every character in the input string
+		for (int i = 0; i < s.length(); i++) {
+			// Add him to the output string if we have not seen it before
+			if (!charSet.contains(s.charAt(i))) {
+				charSet.add(s.charAt(i));
+				sb.append(s.charAt(i));
+			}
+		}
+		return sb.toString();
+	}
 }
