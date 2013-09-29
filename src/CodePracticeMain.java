@@ -14,6 +14,9 @@ public class CodePracticeMain {
 
 		String a = "Kokormex warrior";
 		String b = "Walden koko";
+		
+		System.out.println("Unique: " + StringProblems.getUnique(a) );
+		
 		System.out.println("Common characters for a='" + a + "' and b='" + b + " are: " + 
 				StringProblems.commonCharacters(a, b));
 		System.out.println("Common characters for a='" + a + "' and b='" + b + " are: " + 
