@@ -12,6 +12,11 @@ public class CodePracticeMain {
 		System.out.println("___________________________________________String Problems");
 		String[] strings = { "abcdef", " 78032soa", "I hope this helps.", "78032soa3"};
 
+		String a = "Kokormex warrior";
+		String b = "Walden koko";
+		System.out.println("Common characters for a='" + a + "' and b='" + b + " are: " + StringProblems.commonCharacters(a, b));
+		
+		
 		for (int i = 0; i < strings.length; i++) {
 			System.out.println("String: " + strings[i] + " " + 
 					StringProblems.hasAllUniqueCharacters2(strings[i]));
