@@ -1,4 +1,5 @@
 import java.util.HashMap;
+import java.util.HashSet;
 /**
  * Practice problems related to Strings.
  */
@@ -114,7 +115,7 @@ public class StringProblems {
 		StringBuilder sb = new StringBuilder();		
 		for (int i = 0; i < a.length(); i++) {
 			tmpChar = a.charAt(i);
-			// TODO: You also have to check whether the character already appears in the buffer
+			// TODO: You also have to check whether the character already appears in the buffer.
 			for (int j = 0; j < b.length(); j++) {
 				if (tmpChar == b.charAt(j)) {
 					sb.append(tmpChar);
@@ -124,4 +125,30 @@ public class StringProblems {
 		}
 		return sb.toString();
 	}
+	
+	/**
+	 * Write a function f(a, b) which takes two string arguments and returns a string containing
+	 * only the characters found in both strings in the order of a. Write a version which is order
+	 * N.
+	 * 
+	 * @param a First string
+	 * @param b Second string
+	 * @return String that contains common characters in the order they appear in a
+	 */
+	static String commonCharactersLinear(String a, String b) {
+		StringBuilder sb = new StringBuilder();
+		HashSet<Character> charSet = new HashSet<Character>();
+		for (int i = 0; i < b.length(); i++) {
+			charSet.add(b.charAt(i));
+		}
+		// TODO: You also have to check whether the character already appears in the buffer.
+		for (int i = 0; i < a.length(); i++) {
+			if (charSet.contains(a.charAt(i))) {
+				sb.append(a.charAt(i));
+			}
+		}
+		
+		return sb.toString();
+	}
+	
 }
