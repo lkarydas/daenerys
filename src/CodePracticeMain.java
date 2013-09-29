@@ -14,7 +14,10 @@ public class CodePracticeMain {
 
 		String a = "Kokormex warrior";
 		String b = "Walden koko";
-		System.out.println("Common characters for a='" + a + "' and b='" + b + " are: " + StringProblems.commonCharacters(a, b));
+		System.out.println("Common characters for a='" + a + "' and b='" + b + " are: " + 
+				StringProblems.commonCharacters(a, b));
+		System.out.println("Common characters for a='" + a + "' and b='" + b + " are: " + 
+				StringProblems.commonCharactersLinear(a, b));
 		
 		
 		for (int i = 0; i < strings.length; i++) {
