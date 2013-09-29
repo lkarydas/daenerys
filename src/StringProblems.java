@@ -111,11 +111,12 @@ public class StringProblems {
 	 * @return String that contains common characters in the order they appear in a
 	 */
 	static String commonCharacters(String a, String b) {
+		// Keep only unique characters in string a
+		a = getUnique(a);
 		char tmpChar;
 		StringBuilder sb = new StringBuilder();		
 		for (int i = 0; i < a.length(); i++) {
 			tmpChar = a.charAt(i);
-			// TODO: You also have to check whether the character already appears in the buffer.
 			for (int j = 0; j < b.length(); j++) {
 				if (tmpChar == b.charAt(j)) {
 					sb.append(tmpChar);
@@ -136,12 +137,13 @@ public class StringProblems {
 	 * @return String that contains common characters in the order they appear in a
 	 */
 	static String commonCharactersLinear(String a, String b) {
+		// Keep only unique characters in string a
+		a = getUnique(a);
 		StringBuilder sb = new StringBuilder();
 		HashSet<Character> charSet = new HashSet<Character>();
 		for (int i = 0; i < b.length(); i++) {
 			charSet.add(b.charAt(i));
 		}
-		// TODO: You also have to check whether the character already appears in the buffer.
 		for (int i = 0; i < a.length(); i++) {
 			if (charSet.contains(a.charAt(i))) {
 				sb.append(a.charAt(i));
